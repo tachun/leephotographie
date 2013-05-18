@@ -1,0 +1,41 @@
+// For desktops
+@media only screen and (min-width: $desktop-breakpoint+px) {
+  .hide-on-tablet, .hide-on-mobile{
+    display: inherit;
+  }
+  .hide-on-desktop{
+    display: none !important;
+  }
+}
+
+// Tablets & small desktops only
+@media only screen and (min-width: $tablet-breakpoint+px) and (max-width: $desktop-breakpoint+px) {
+  .hide-on-desktop, .hide-on-mobile{
+    display: inherit;
+  }
+  .hide-on-tablet{
+    display: none !important;
+  }
+}
+
+// For mobiles
+@media only screen and (max-width: $tablet-breakpoint+px) {
+  .hide-on-desktop, .hide-on-tablet{
+    display: inherit;
+  }
+  .hide-on-mobile{
+    display: none !important;
+  }
+  @include reset_columns_mobile();
+
+  /* Reset text align */
+  .header .main-nav{
+    margin: 0 0 40px 0;
+    text-align: center !important;
+  }
+}
+
+
+@media print {
+  /* TODO , reset styles for print */
+}

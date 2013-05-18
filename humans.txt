@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Tachun LIN -- UI/Ux Design, Development -- @creed88
+  www.tachunlin.com
+
+# THANKS
+
+  mogra framework
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3
+  Normalize.css, jQuery, Modernizr
