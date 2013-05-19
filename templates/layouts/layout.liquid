@@ -26,8 +26,6 @@
         <![endif]-->
 
         <div id="wrapper" class="row app-container">
-            <!-- Include -->
-            {% include "header" %}
             <!-- Content block, child page inject content -->
             {% block content %}{% endblock %}
             {% include "footer" %}
@@ -35,14 +33,16 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         {{ "lib/jquery-1.9.1.min.js" | asset_url | script_tag }}
-        <script>
+        {{ "lib/responsiveslides.min.js" | asset_url | script_tag }}
+        {{ "main.js" | asset_url | script_tag }}
+                <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
-        {{ "main.js" | asset_url | script_tag }}
     </body>
 </html>

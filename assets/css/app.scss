@@ -5,6 +5,7 @@
 @import 'lib/mixins';
 @import 'lib/grid';
 @import 'lib/responsive';
+@import 'lib/responsiveslides';
 
 html{
   font-size: 62.5%;
@@ -78,8 +79,14 @@ ul, ol, li{
     text-decoration: none;
     font-weight: 400;
     @include basic-transtion(all, .3s, ease-in-out);
+    border-bottom: 1px solid #fff;
     &:hover{
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+    &.selected{
       color: $highlight-color;
+      border-bottom: 1px solid $highlight-color;
     }
   }
   .hasSubmenu{
@@ -90,38 +97,21 @@ ul, ol, li{
 .submenu{
   display: inline-block;
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 10px;
+  left: -30px;
   z-index: 200;
   width: 210px;
-  padding: 20px;
+  padding: 10px 20px;
   text-align: left;
   background: #fff;
-  box-shadow: 0 0 4px 0 $gray-color;
+  box-shadow: 0 2px 7px 0 $gray-color*1.2;
+  display: none;
   li{
     padding: 5px 0;
   }
   a{
     letter-spacing: 1px;
   }
-}
-
-.submenu:after {
-  bottom: 100%;
-  border: solid $gray-color;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.submenu:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: #fff;
-  border-width: 10px;
-  left: 50%;
-  margin-left: -10px;
 }
 
 .footer{
@@ -213,7 +203,8 @@ ul, ol, li{
   }
   .album-title{
     display: block;
-    @include font-size(22);
+    @include font-size(20);
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
   .album-photo-counts{
@@ -240,13 +231,14 @@ ul, ol, li{
     color: $default-font-color;
     text-decoration: none;
   }
-  h3{
+  .expo-title{
     display: inline-block;
     @include font-size(36);
     text-transform: uppercase;
+    letter-spacing: 3px;
     padding: 5px 15px;
-    border: 1px solid $default-font-color;
     margin: 10px 0;
+    border: 1px solid $default-font-color;
     @include basic-transtion(all, .5s, ease-in-out);
     &:hover{
       color: #fff;
@@ -254,9 +246,98 @@ ul, ol, li{
       box-shadow: inset 0 0 0 3px rgba(255,255,255,.2);
     }
   }
-  h4{
+  .expo-desc{
     @include font-size(24);
     margin: 0;
     letter-spacing: 3px;
+  }
+}
+
+
+/* About page */
+.about-header{
+  text-align: center;
+}
+
+.section-title{
+  @include font-size(36);
+  letter-spacing: 3px;
+  margin-bottom: 0;
+}
+
+.about-title{
+  display: inline-block;
+  color: $gray-color;
+  @include font-size(24);
+  letter-spacing: 3px;
+  margin: 0 auto;
+}
+
+hr{
+  width: 300px;
+  margin: 20px auto 30px auto;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.about-subtitle{
+  display: none;
+  color: $highlight-color;
+  @include font-size(18);
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+.about-content{
+  margin-top: 40px;
+  h4{
+    @include font-size(18);
+    letter-spacing: 3px;
+  }
+  p{
+    @include font-size(14);
+    line-height: 24px;
+  }
+}
+
+/* works pages */
+.work-desc{
+  @include font-size(14);
+  line-height: 24px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.slider-container{
+  text-align: center;
+  .col2{
+    padding: 0;
+  }
+}
+
+.slide-thumb{
+  display: inline-block;
+  margin: 0;
+  li{
+    float: left;
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    overflow: hidden;
+    background-color: $default-font-family;
+    border: 1px solid #fff;
+    img{
+      height: 54px;
+      @include grayscale();
+      @include opacity(.6);
+    }
+    &:hover, &.rslides_here{
+      img{
+        @include grayscale(false);
+        @include opacity(1);
+      }
+    }
   }
 }
