@@ -35,7 +35,8 @@
         {{ "lib/jquery-1.9.1.min.js" | asset_url | script_tag }}
         {{ "lib/responsiveslides.min.js" | asset_url | script_tag }}
         {{ "main.js" | asset_url | script_tag }}
-                <script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src='//www.google-analytics.com/ga.js';
@@ -45,11 +46,11 @@
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
 
-        <!-- TODO: Add wufoo form :-) -->
         <!-- TODO: Fix album page size, add loader background for all photos :-) -->
-        <!-- TODO: News layout, map + gallery information :-) -->
+        <!-- TODO: Add js validate :-) -->
+        <!-- TODO: News layout, grayscale map + gallery information :-) -->
+        
         <!-- TODO: Try js load :-) -->
-
         <!-- TODO: Made of stars video :-) -->
 
     </body>

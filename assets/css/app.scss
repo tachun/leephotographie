@@ -26,15 +26,44 @@ body{
 
 h1, h2, h3, h4 ,h5, h6{
   font-weight: 700;
+  letter-spacing: 3px;
 }
 ul, ol, li{
   padding: 0;
+}
+h1{
+  @include font-size(36);
+}
+h2{
+  @include font-size(30);
+}
+h3{
+  @include font-size(36);
+}
+h4{
+  @include font-size(24);
+}
+p, label{
+  @include font-size(14);
+  line-height: 24px;
 }
 .fr{
   float: right;
 }
 .fl{
   float: left;
+}
+::selection{
+  color: #fff;
+  background-color: $highlight-color;
+}
+
+.hide{
+  display: none;
+}
+
+fieldset{
+  border: none;
 }
 
 /* Basic Layout */
@@ -292,14 +321,11 @@ hr{
 
 .about-content{
   margin-top: 40px;
-  h4{
-    @include font-size(18);
-    letter-spacing: 3px;
-  }
-  p{
-    @include font-size(14);
-    line-height: 24px;
-  }
+}
+
+.content-title{
+  @include font-size(18);
+  letter-spacing: 3px;
 }
 
 /* works pages */
@@ -340,4 +366,62 @@ hr{
       }
     }
   }
+}
+
+/* Contact page */
+.contact-content{
+  margin: 20px 0;
+}
+
+textarea, input[type=text], input[type=email]{
+  width: 98%;
+  color: #9b9b9b;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ddd !important;
+  border-radius: 3px;
+  font-family: 'Karla', sans-serif;
+}
+
+textarea{
+  height: 100px;
+}
+
+.buttons input, input[type=submit]{
+  float: right;
+  display: inline-block;
+  font-size: 20px !important;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  margin-top: 30px;
+  background-color: #fff;
+  border: 1px solid #414141;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition:    all .3s ease-in-out;
+  -ms-transition:     all .3s ease-in-out;
+  -o-transition:      all .3s ease-in-out;
+  transition:         all .3s ease-in-out;
+}
+
+.buttons input:hover, input[type=submit]:hover{
+  color: #fff;
+  background-color: #414141;
+}
+
+.buttons input:active, input[type=submit]:active{
+  color: #fff;
+  background-color: #999;
+}
+
+/* News page */
+.news-content{
+  margin: 20px 0;
+  height: 500px;
+}
+
+#map-canvas{
+  height: 100%;
 }
