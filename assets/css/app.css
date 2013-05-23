@@ -546,7 +546,13 @@ table {
     height: 300px; }
 
   .last-row {
-    height: 228px; } }
+    height: 228px; }
+
+  .rslides li {
+    height: 547px; }
+    .rslides li img {
+      width: auto;
+      height: 100%; } }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .hide-on-desktop, .hide-on-mobile {
     display: inherit; }
@@ -994,6 +1000,12 @@ hr {
   .slider-container .col2 {
     padding: 0; }
 
+.rslides li {
+  text-align: center; }
+  .rslides li img {
+    float: none;
+    margin: 0 auto; }
+
 .slide-thumb {
   display: inline-block;
   margin: 0; }
@@ -1002,21 +1014,31 @@ hr {
     display: inline-block;
     width: 54px;
     height: 54px;
+    text-align: center;
     overflow: hidden;
-    background-color: "Karla", sans-serif;
-    border: 1px solid #fff; }
-    .slide-thumb li img {
-      height: 54px;
-      filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-      /* Firefox 10+, Firefox on Android */
-      filter: gray;
-      /* IE6-9 */
-      -webkit-filter: grayscale(100%);
-      /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-      zoom: 1;
-      filter: alpha(opacity=60);
-      opacity: 0.6; }
-    .slide-thumb li:hover img, .slide-thumb li.rslides_here img {
+    background-color: #eee;
+    background-position: center top;
+    background-size: auto 100%;
+    border: 1px solid #fff;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    /* Firefox 10+, Firefox on Android */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .slide-thumb li a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    .slide-thumb li:hover, .slide-thumb li.rslides_here {
       filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
       -webkit-filter: grayscale(0%);
       zoom: 1;
@@ -1051,11 +1073,11 @@ textarea {
   background-color: #fff;
   border: 1px solid #414141;
   cursor: pointer;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 .buttons input:hover, input[type=submit]:hover {
   color: #fff;

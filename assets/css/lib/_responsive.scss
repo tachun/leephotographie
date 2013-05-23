@@ -16,6 +16,14 @@
   .last-row{
     height: 228px;
   }
+
+  .rslides li{
+    height: 547px;
+    img{
+      width: auto;
+      height: 100%;
+    }
+  }
 }
 
 // Tablets & small desktops only
@@ -39,6 +47,10 @@
   }
   .last-row{
     height: 228px;
+  }
+
+  .rslides li{
+
   }
 }
 
