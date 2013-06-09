@@ -15,6 +15,9 @@
         <title>{% block title %}Mr.Lee's Portfolio{% endblock %}</title>
         {{ "lib/modernizr-2.6.2.min.js" | asset_url | script_tag }}
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        {{ "lib/jquery-1.9.1.min.js" | asset_url | script_tag }}
+        {{ "lib/parse-1.2.8.min.js" | asset_url | script_tag }}
+        {{ "main.js" | asset_url | script_tag }}
         <!-- Styles -->
         {{ "app.css" | asset_url | stylesheet_tag }}
         <!-- Style block allowing child pages to inject their own styles -->
@@ -32,9 +35,7 @@
         </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        {{ "lib/jquery-1.9.1.min.js" | asset_url | script_tag }}
         {{ "lib/responsiveslides.min.js" | asset_url | script_tag }}
-        {{ "main.js" | asset_url | script_tag }}
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

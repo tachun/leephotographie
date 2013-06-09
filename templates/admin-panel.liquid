@@ -1,0 +1,14 @@
+{% block content %}
+  {{ "admin.js" | asset_url | script_tag }}
+  <section class="admin-panel">
+    <button id="logoutBtn">Log out</button>
+  </section>
+  <script>
+    $(function() {
+      var currentUser = Parse.User.current();
+      if (!currentUser) {
+        window.location.href = "admin/";
+      }
+    });
+  </script>
+{% endblock %}

@@ -628,6 +628,26 @@ table {
   width: 100%;
   border: 0; }
 
+.login-panel {
+  width: 322px;
+  height: 500px;
+  margin: 30px auto; }
+  .login-panel input[type=text], .login-panel input[type=password] {
+    width: 300px;
+    margin-bottom: 30px; }
+  .login-panel .messages {
+    display: none;
+    color: #42c428;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    background-color: rgba(172, 249, 157, 0.3);
+    outline: 1px solid rgba(172, 249, 157, 0.5);
+    border-radius: 3px; }
+  .login-panel .error {
+    color: #ff4b4b;
+    background-color: rgba(255, 117, 117, 0.3);
+    outline: 1px solid rgba(255, 117, 117, 0.5); }
+
 html {
   font-size: 62.5%; }
 
@@ -1049,7 +1069,7 @@ hr {
 .contact-content {
   margin: 20px 0; }
 
-textarea, input[type=text], input[type=email] {
+textarea, input[type=text], input[type=email], input[type=password] {
   width: 98%;
   color: #9b9b9b;
   font-size: 14px;
@@ -1061,7 +1081,7 @@ textarea, input[type=text], input[type=email] {
 textarea {
   height: 100px; }
 
-.buttons input, input[type=submit] {
+.buttons input, input[type=submit], button.submit {
   float: right;
   display: inline-block;
   font-size: 20px !important;
@@ -1079,11 +1099,11 @@ textarea {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
 
-.buttons input:hover, input[type=submit]:hover {
+.buttons input:hover, input[type=submit]:hover, button.submit:hover {
   color: #fff;
   background-color: #414141; }
 
-.buttons input:active, input[type=submit]:active {
+.buttons input:active, input[type=submit]:active, button.submit:active {
   color: #fff;
   background-color: #999; }
 

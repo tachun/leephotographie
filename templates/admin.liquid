@@ -1,0 +1,14 @@
+{% block content %}
+  {{ "admin.js" | asset_url | script_tag }}
+  <section class="login-panel">
+    <form id="login" class="login-form">
+      <h2>Log In</h2>
+      <p id="messages" class="messages"></p>
+      <div class="error" style="display:none"></div>
+      <input type="text" id="login-username" placeholder="Username" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button id="loginBtn" class="submit">Log In</button>
+      <button id="logoutBtn">Log out</button>
+    </form>
+  </section>
+{% endblock %}

@@ -6,6 +6,7 @@
 @import 'lib/grid';
 @import 'lib/responsive';
 @import 'lib/responsiveslides';
+@import 'lib/admin';
 
 html{
   font-size: 62.5%;
@@ -378,7 +379,7 @@ hr{
   margin: 20px 0;
 }
 
-textarea, input[type=text], input[type=email]{
+textarea, input[type=text], input[type=email], input[type=password]{
   width: 98%;
   color: #9b9b9b;
   font-size: 14px;
@@ -392,7 +393,7 @@ textarea{
   height: 100px;
 }
 
-.buttons input, input[type=submit]{
+.buttons input, input[type=submit], button.submit{
   float: right;
   display: inline-block;
   font-size: 20px !important;
@@ -407,12 +408,12 @@ textarea{
   @include basic-transtion(all, .5s, ease-in-out);
 }
 
-.buttons input:hover, input[type=submit]:hover{
+.buttons input:hover, input[type=submit]:hover, button.submit:hover{
   color: #fff;
   background-color: #414141;
 }
 
-.buttons input:active, input[type=submit]:active{
+.buttons input:active, input[type=submit]:active, button.submit:active{
   color: #fff;
   background-color: #999;
 }
