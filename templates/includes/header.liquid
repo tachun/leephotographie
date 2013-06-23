@@ -1,27 +1,33 @@
 <header class="header row">
-	<h1 class="logo fl col2 hide-on-mobile">
+	<div class="col3">
+    <h1 class="logo hide-on-mobile">
+      <a href="/"><img src="assets/img/logo.png" alt="Main logo"></a>
+    </h1>
+  </div>
+  <div class="col9">
+    <h1 class="section-title">
+      {% if current_p == "appartement" %}
+        THE APPARTMENT
+      {% elsif current_p == "long_haired_short_haired" %}
+        LONG HAIRED SHORT HAIRED
+      {% elsif current_p == "bollywood" %}
+        DO YOU BOLLYWOOD
+      {% elsif current_p == "jarawa" %}
+        JARAWAS
+      {% elsif current_p == "road" %}
+        ROAD
+      {% elsif current_p == "about" %}
+        ABOUT
+      {% elsif current_p == "news" %}
+        NEWS
+      {% elsif current_p == "contact" %}
+        CONTACT
+      {% endif %}
+    </h1>
+    <hr>
+  </div>
+
+  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
     <a href="/"><img src="assets/img/logo.png" alt="Main logo"></a>
   </h1>
-  <h1 class="mobile-logo col2 hide-on-desktop hide-on-tablet">
-    <a href="/"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <nav class="main-nav fr col10">
-    <ul class="navigation cf">
-      <li class="hasSubmenu jsOpenSubmenu">
-        <a href="" {% if current_p == 'work' %} class="selected" {% endif %}>WORK</a>&nbsp;|&nbsp;
-        <ul class="submenu">
-          <li><a href="apartments">APARTMENTS</a></li>
-          <li><a href="nobody">I'M NOBODY</a></li>
-          <li><a href="long_haired_short_haired">LONG HAIRED SHORT HAIRED</a></li>
-          <li><a href="bollywood">DO YOU BOLLYWOOD</a></li>
-          <li><a href="jarawa">JARAWA</a></li>
-          <li><a href="made_of_stars">WE ARE ALL MADE OF STARS</a></li>
-        </ul>
-      </li>
-      <li><a href="about" {% if current_p == 'about' %} class="selected" {% endif %}> ABOUT</a>&nbsp;|&nbsp;</li>
-      <li><a href="news" {% if current_p == 'news' %} class="selected" {% endif %}>NEWS</a>&nbsp;|&nbsp;</li>
-      <li><a href="contact" {% if current_p == 'contact' %} class="selected" {% endif %}>CONTACT</a></li>
-      <!-- <li><a href="">Links</a></li> -->
-    </ul>
-  </nav>
 </header>

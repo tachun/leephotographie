@@ -54,6 +54,19 @@ p, label{
 .fl{
   float: left;
 }
+
+.relative{
+  position: relative;
+}
+
+.no-top-margin{
+  margin-top: 0 !important;
+}
+
+.no-right-padding{
+  padding-right: 0;
+}
+
 ::selection{
   color: #fff;
   background-color: $highlight-color;
@@ -80,71 +93,62 @@ fieldset{
     @include grayscale();
     @include opacity(0.5);
     @include basic-transtion(all, .5s, ease-in-out);
-    img{
-      height: 60px;
-    }
     &:hover{
       @include grayscale(false);
       @include opacity(1);
     }
+    img{
+      height: 60px;
+    }
   }
-  .main-nav{
-    text-align: right;
-  }
+}
+
+aside{
+  padding-bottom: 40px;
 }
 
 .navigation{
   display: inline-block;
-  margin-top: 40px;
+  width: 94%;
+  margin: 0;
+  padding: 0;
+  text-align: right;
   & > li{
-    float: left;
     color: $gray-color;
-    letter-spacing: 3px;
-  }
-  a{
-    padding: 0;
-    @include font-size(14);
-    color: $gray-color;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 400;
-    @include basic-transtion(all, .3s, ease-in-out);
-    border-bottom: 1px solid #fff;
-    &:hover{
-      color: #000;
-      border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    a{
+      padding: 0;
+      @include font-size(14);
+      color: $gray-color*.7;
+      text-decoration: none;
+      font-weight: 400;
+      @include basic-transtion(all, .2s, ease-in-out);
+      &:hover{
+        color: #000;
+      }
+      &.selected{
+        color: $highlight-color;
+      }
     }
-    &.selected{
-      color: $highlight-color;
-      border-bottom: 1px solid $highlight-color;
-    }
-  }
-  .hasSubmenu{
-    position: relative;
   }
 }
 
 .submenu{
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  left: -30px;
-  z-index: 200;
-  width: 210px;
-  padding: 10px 20px;
-  text-align: left;
-  background: #fff;
-  box-shadow: 0 2px 7px 0 $gray-color*1.2;
-  display: none;
   li{
     padding: 5px 0;
   }
   a{
     letter-spacing: 1px;
+    @include opacity(.7);
+    &:hover, &.selected{
+      color: $highlight-color !important;
+      @include opacity(1);
+    }
   }
 }
 
 .footer{
+  width: 100%;
   height: 40px;
   color: $gray-color;
   text-transform: uppercase;
@@ -154,6 +158,7 @@ fieldset{
     display: inline-block;
     @include font-size(12);
     line-height: 40px;
+    margin: 0;
     &.credit{
       text-align: right;
     }
@@ -172,10 +177,6 @@ fieldset{
   .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12{
     padding: 0;
     overflow: hidden;
-    img{
-      width: 100%;
-      cursor: pointer;
-    }
   }
 }
 
@@ -260,7 +261,7 @@ fieldset{
     padding: 5px 15px;
     margin: 10px 0;
     border: 1px solid $default-font-color;
-    @include basic-transtion(all, .5s, ease-in-out);
+    @include basic-transtion(all, .3s, ease-in-out);
     &:hover{
       color: #fff;
       background-color: $default-font-color;
@@ -274,14 +275,14 @@ fieldset{
   }
 }
 
-
 /* About page */
 .about-header{
-  text-align: center;
+  height: 160px;
 }
 
 .section-title{
-  @include font-size(36);
+  text-align: center;
+  @include font-size(28);
   letter-spacing: 3px;
   margin-bottom: 0;
 }
@@ -290,7 +291,7 @@ fieldset{
   display: inline-block;
   color: $gray-color;
   @include font-size(24);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin: 0 auto;
 }
 
@@ -304,15 +305,24 @@ hr{
 }
 
 .about-subtitle{
-  display: none;
   color: $highlight-color;
-  @include font-size(18);
-  letter-spacing: 3px;
+  @include font-size(17);
+  letter-spacing: 2px;
   font-style: italic;
 }
 
 .about-content{
   margin-top: 40px;
+}
+
+.edu li{
+  list-style: none;
+  width: 40%;
+  float: left;
+  margin-right: 5%;
+  .edu-title{
+    margin-top: 0;
+  }
 }
 
 .content-title{
@@ -323,9 +333,61 @@ hr{
 /* works pages */
 .work-desc{
   @include font-size(14);
+  text-align: right;
   line-height: 24px;
-  text-align: left;
-  margin-top: 20px;
+  width: 94%;
+}
+
+.col9.relative{
+  height: 100%;
+}
+
+.project-description{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 10px 40px;
+  background-color: rgba(255,255,255,.9);
+  @include box-sizing(border-box);
+}
+
+.close{
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  z-index: 120;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid #000;
+  &:hover{
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+.enDesc, .frDesc{
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-right: 10px;
+  @include basic-transtion(all, .3s, ease-in-out);
+  &:hover{
+    color: #fff;
+    background-color: #000;
+  }
 }
 
 .slider-container{
@@ -346,12 +408,14 @@ hr{
 }
 
 .slide-thumb{
+  -webkit-backface-visibility: hidden;
   display: inline-block;
   margin: 0;
+  width: 94%;
   li{
     float: left;
     display: inline-block;
-    width: 54px;
+    width: 32%;
     height: 54px;
     text-align: center;
     overflow: hidden;
@@ -366,6 +430,9 @@ hr{
       display: block;
       width: 100%;
       height: 100%;
+      background-repeat: none;
+      background-position: center;
+      background-size: cover;
     }
     &:hover, &.rslides_here{
       @include grayscale(false);

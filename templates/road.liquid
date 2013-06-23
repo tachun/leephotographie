@@ -1,0 +1,39 @@
+{% block content %}
+  {% assign current_p = "road" %}
+  {% include "header" %}
+  
+  <section id="about-section" class="about-section row">  
+    <div class="slider-container row">
+      <aside class="col3 no-right-padding">
+        {% include 'nav' %}
+        <ul id="slider-pager" class="slide-thumb cf">
+          <li><a href="" style="background-image: url(assets/img/photos/road/1_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/2_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/3_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/4_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/5_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/6_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/7_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/road/8_s.jpg)"></a></li>
+        </ul>
+        <button class="openProjectDesc enDesc">EN</button>
+        <button class="openProjectDesc frDesc">FR</button>
+      </aside>
+
+      <div class="col9 relative">
+        {% include 'project-desc' %}
+        <ul id="slider" class="rslides">
+          <li><img src="assets/img/photos/road/1.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/2.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/3.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/4.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/5.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/6.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/7.jpg" alt=""></li>
+          <li><img src="assets/img/photos/road/8.jpg" alt=""></li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+{% endblock %}

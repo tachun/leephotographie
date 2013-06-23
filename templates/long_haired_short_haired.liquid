@@ -1,13 +1,36 @@
 {% block content %}
-  {% assign current_p = "work" %}
+  {% assign current_p = "long_haired_short_haired" %}
   {% include "header" %}
   
-  <section id="about-section" class="about-section row">
-    <header class="about-header">
-      <h1 class="section-title">LONG HAIRED SHORT HAIRED</h1>
-    </header>
+  <section id="about-section" class="about-section row">  
     <div class="slider-container row">
-      <div class="col10">
+      <aside class="col3 no-right-padding">
+        {% include 'nav' %}
+        <ul id="slider-pager" class="slide-thumb cf">
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/1_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/2_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/3_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/4_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/5_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/6_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/7_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/8_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/9_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/10_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/11_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/12_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/13_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/14_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/15_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/16_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/long_haired_short_haired/17_s.jpg)"></a></li>
+        </ul>
+        <button class="openProjectDesc enDesc">EN</button>
+        <button class="openProjectDesc frDesc">FR</button>
+      </aside>
+
+      <div class="col9 relative">
+        {% include 'project-desc' %}
         <ul id="slider" class="rslides">
           <li><img src="assets/img/photos/long_haired_short_haired/1.jpg" alt=""></li>
           <li><img src="assets/img/photos/long_haired_short_haired/2.jpg" alt=""></li>
@@ -26,38 +49,7 @@
           <li><img src="assets/img/photos/long_haired_short_haired/15.jpg" alt=""></li>
           <li><img src="assets/img/photos/long_haired_short_haired/16.jpg" alt=""></li>
           <li><img src="assets/img/photos/long_haired_short_haired/17.jpg" alt=""></li>
-          <li><img src="assets/img/photos/long_haired_short_haired/18.jpg" alt=""></li>
-          <li><img src="assets/img/photos/long_haired_short_haired/19.jpg" alt=""></li>
-          <li><img src="assets/img/photos/long_haired_short_haired/20.jpg" alt=""></li>
         </ul>
-      </div>
-      
-      <div class="col2">
-        <ul id="slider-pager" class="slide-thumb cf">
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/1.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/2.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/3.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/4.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/5.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/6.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/7.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/8.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/9.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/10.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/11.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/12.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/13.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/14.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/15.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/16.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/17.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/18.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/19.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/long_haired_short_haired/20.jpg" alt=""></a></li>
-        </ul>
-        <p class="work-desc">
-          According to the culture after the millennium, the difference in sexes is becoming more and more unclear, among young people. One of the main differences is the way adolescents use or don’t use make-up and how they have their unique hair styles. The new pop culture and influences from fashion dictate that young people rebel and appear to look different.
-        </p>
       </div>
     </div>
 

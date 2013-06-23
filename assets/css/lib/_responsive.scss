@@ -18,10 +18,9 @@
   }
 
   .rslides li{
-    height: 547px;
+    width: 100%;
     img{
-      width: auto;
-      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -36,7 +35,7 @@
   }
 
   .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12{
-    width: 50%;
+
   }
   
   .apartments-cover, .bollywood-cover{
@@ -71,6 +70,9 @@
   }
   .footer p.credit{
     text-align: center !important;
+  }
+  .slide-thumb li{
+    width: 54px !important;
   }
 }
 

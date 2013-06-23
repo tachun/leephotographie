@@ -1,15 +1,33 @@
 {% block content %}
-  {% assign current_p = "work" %}
+  {% assign current_p = "appartement" %}
   {% include "header" %}
 
-  <section id="about-section" class="about-section row">
-    <header class="about-header">
-      <h1 class="section-title">APARTMENTS</h1>
-    </header>
-    <hr>
-    
+  <section id="about-section" class="about-section row">  
     <div class="slider-container row">
-      <div class="col10">
+      <aside class="col3 no-right-padding">
+        {% include 'nav' %}
+        <ul id="slider-pager" class="slide-thumb cf">
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/1_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/2_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/3_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/4_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/5_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/6_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/7_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/8_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/9_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/10_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/11_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/12_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/13_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/14_s.jpg)"></a></li>
+        </ul>
+        <button class="openProjectDesc enDesc">EN</button>
+        <button class="openProjectDesc frDesc">FR</button>
+      </aside>
+
+      <div class="col9 relative">
+        {% include 'project-desc' %}
         <ul id="slider" class="rslides">
           <li><img src="assets/img/photos/apartments/1.jpg" alt=""></li>
           <li><img src="assets/img/photos/apartments/2.jpg" alt=""></li>
@@ -25,29 +43,7 @@
           <li><img src="assets/img/photos/apartments/12.jpg" alt=""></li>
           <li><img src="assets/img/photos/apartments/13.jpg" alt=""></li>
           <li><img src="assets/img/photos/apartments/14.jpg" alt=""></li>
-          <li><img src="assets/img/photos/apartments/15.jpg" alt=""></li>
         </ul>
-      </div>
-      
-      <div class="col2">
-        <ul id="slider-pager" class="slide-thumb cf">
-          <li style="background-image: url(assets/img/photos/apartments/1.jpg)"><a href=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/2.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/3.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/4.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/5.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/6.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/7.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/8.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/9.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/10.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/11.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/12.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/13.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/14.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/15.jpg" alt=""></a></li>
-        </ul>
-        <p class="work-desc">Living theatre of everyday life</p>
       </div>
     </div>
 
