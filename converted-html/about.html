@@ -11,16 +11,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
         <title>Mr.Lee's Portfolio</title>
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
+        <script src="assets/scripts/lib/screenfull.min.js"></script>
+        
         <script src="assets/scripts/main.min.js"></script>
-        <!-- Styles -->
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
     <body>
@@ -29,79 +28,110 @@
         <![endif]-->
 
         <div id="wrapper" class="row app-container">
-            <!-- Content block, child page inject content -->
             
   
   <header class="header row">
-	<h1 class="logo fl col2 hide-on-mobile">
+	<div class="col3">
+    <h1 class="logo hide-on-mobile">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+    </h1>
+  </div>
+  <div class="col9">
+    <h1 class="section-title">
+      
+        ABOUT
+      
+    </h1>
+    
+      <hr>
+    
+  </div>
+
+  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
     <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
   </h1>
-  <h1 class="mobile-logo col2 hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <nav class="main-nav fr col10">
-    <ul class="navigation cf">
-      <li class="hasSubmenu jsOpenSubmenu">
-        <a href="" >WORK</a>&nbsp;|&nbsp;
-        <ul class="submenu">
-          <li><a href="apartments.html">APARTMENTS</a></li>
-          <li><a href="nobody.html">I'M NOBODY</a></li>
-          <li><a href="long_haired_short_haired.html">LONG HAIRED SHORT HAIRED</a></li>
-          <li><a href="bollywood.html">DO YOU BOLLYWOOD</a></li>
-          <li><a href="jarawa.html">JARAWA</a></li>
-          <li><a href="made_of_stars.html">WE ARE ALL MADE OF STARS</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html"  class="selected" > ABOUT</a>&nbsp;|&nbsp;</li>
-      <li><a href="news.html" >NEWS</a>&nbsp;|&nbsp;</li>
-      <li><a href="contact.html" >CONTACT</a></li>
-      <!-- <li><a href="">Links</a></li> -->
-    </ul>
-  </nav>
 </header>
   
-  <section id="about-section" class="about-section row">
-    <header class="about-header">
-      <h1 class="section-title">ABOUT</h1>
-      <hr>
-      <h2 class="about-title">Mr. Lee, Ching-Tsang</h2>
-      <h3 class="about-subtitle">Living and working in Paris</h3>
-    </header>
-    
+  <section id="about-section" class="about-section row">    
     <div class="row about-content">
-      <div class="col6">
-        <h4 class="content-title">BIOGRAPHIE</h4>
+      <aside class="col3 no-right-padding">
+        <nav class="main-nav">
+  <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" ">
+        <li>
+          <a href="apartments.html" >Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" >Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html"  class="selected" > ABOUT</a></li>
+    <li><a href="news.html" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+      </aside>
+
+      <div class="col9">
+        <header class="about-header">
+          <h2 class="about-title">Mr. Lee, Ching-Tsang</h2>
+          <h3 class="about-subtitle">Living and working in Paris</h3>
+        </header>
+        <h4 class="content-title no-top-margin">BIOGRAPHIE</h4>
         <p>
           Ching Tsang Lee est né en 1972. Il a étudié la photographie à l’Université Paris 8. Son mémoire avait pour sujet « Photographie : mise en scène de la vie quotidienne et simulacre ». C’est ce postulat que l’on retrouve dans la série qu’il exposera à la Galerie Le 29. La série « Do you Bollywood ? » prend place à Bombay, berceau du cinéma indien où ce dernier tient véritablement un rôle social important. Il devient un moyen d’échapper aux problèmes de la vie quotidienne. 
         </p>
-      </div>
-      <div class="col3">
-        <h4 class="content-title">EDUCATION</h4>
-        <p><strong>2007 - 2008</strong></p>
-        <p class="edu-detail">
-          Université Paris 8, Paris<br>
-          Master 2 RECH.<br>
-          Esthétique et Histoire arts plastiques et Photographie
-        </p>
-        <p><strong>2004 - 2007</strong></p>
-        <p class="edu-detail">
-          Université Paris 8, Paris<br>
-          Maîtrise de Science et Technique<br>
-          Photographie et Multimédia
-        </p>
-      </div>
-      <div class="col3">
-        <h4 class="content-title">LANGUES</h4>
-        <p>
-          Français, Anglais, Chinois (Mandarin)
-        </p>
         
-        <h4 class="content-title">CONTACT</h4>
-        <p><strong>Telephone :</strong></p>
-        <p>+33 (0) 6 76 45 58 75</p>
+        <h4 class="content-title">EDUCATION</h4>
+        <div class="cf">
+          <ul class="half-list">
+            <li>
+              <p class="list-title"><strong>2007 - 2008</strong></p>
+              <p class="edu-detail">
+                Université Paris 8, Paris<br>
+                Master 2 RECH.<br>
+                Esthétique et Histoire arts plastiques et Photographie
+              </p>
+            </li>
+            <li>
+              <p class="list-title"><strong>2004 - 2007</strong></p>
+              <p class="edu-detail">
+                Université Paris 8, Paris<br>
+                Maîtrise de Science et Technique<br>
+                Photographie et Multimédia
+              </p>
+            </li>
+          </ul>
+        </div>
+        
+        <h4 class="content-title">LANGUES</h4>
+        <p>Français, Anglais, Chinois (Mandarin)</p>
 
-        <p><strong>E-mail :</strong></p>
-        <p>chingtsang.lee@gmail.com</p>
+        <h4 class="content-title">CONTACT</h4>
+        <div class="cf">
+          <ul class="half-list">
+            <li>
+              <p class="list-title"><strong>E-mail :</strong></p>
+              <p>chingtsang.lee@gmail.com</p>
+            </li>
+            <li>
+              <p class="list-title"><strong>Telephone :</strong></p>
+              <p>+33 (0) 6 76 45 58 75</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     
@@ -116,18 +146,9 @@
   </p>
 </footer>
         </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
         
-        <!-- Script block allowing child pages to inject their own scripts -->
         
 
         <!-- TODO: Fix album page size, add loader background for all photos :-) -->

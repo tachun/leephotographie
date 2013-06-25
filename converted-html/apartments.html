@@ -11,16 +11,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
         <title>Mr.Lee's Portfolio</title>
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
+        <script src="assets/scripts/lib/screenfull.min.js"></script>
+        
         <script src="assets/scripts/main.min.js"></script>
-        <!-- Styles -->
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
     <body>
@@ -29,45 +28,97 @@
         <![endif]-->
 
         <div id="wrapper" class="row app-container">
-            <!-- Content block, child page inject content -->
             
   
   <header class="header row">
-	<h1 class="logo fl col2 hide-on-mobile">
+	<div class="col3">
+    <h1 class="logo hide-on-mobile">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+    </h1>
+  </div>
+  <div class="col9">
+    <h1 class="section-title">
+      
+        THE APPARTMENT
+      
+    </h1>
+    
+      <hr>
+    
+  </div>
+
+  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
     <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
   </h1>
-  <h1 class="mobile-logo col2 hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <nav class="main-nav fr col10">
-    <ul class="navigation cf">
-      <li class="hasSubmenu jsOpenSubmenu">
-        <a href=""  class="selected" >WORK</a>&nbsp;|&nbsp;
-        <ul class="submenu">
-          <li><a href="apartments.html">APARTMENTS</a></li>
-          <li><a href="nobody.html">I'M NOBODY</a></li>
-          <li><a href="long_haired_short_haired.html">LONG HAIRED SHORT HAIRED</a></li>
-          <li><a href="bollywood.html">DO YOU BOLLYWOOD</a></li>
-          <li><a href="jarawa.html">JARAWA</a></li>
-          <li><a href="made_of_stars.html">WE ARE ALL MADE OF STARS</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html" > ABOUT</a>&nbsp;|&nbsp;</li>
-      <li><a href="news.html" >NEWS</a>&nbsp;|&nbsp;</li>
-      <li><a href="contact.html" >CONTACT</a></li>
-      <!-- <li><a href="">Links</a></li> -->
-    </ul>
-  </nav>
 </header>
 
-  <section id="about-section" class="about-section row">
-    <header class="about-header">
-      <h1 class="section-title">APARTMENTS</h1>
-    </header>
-    <hr>
-    
+  <section id="about-section" class="about-section row">  
     <div class="slider-container row">
-      <div class="col10">
+      <aside class="col3 no-right-padding">
+        <nav class="main-nav">
+  <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" ">
+        <li>
+          <a href="apartments.html" class='selected'>Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" >Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html" > ABOUT</a></li>
+    <li><a href="news.html" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+        <ul id="slider-pager" class="slide-thumb cf">
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/1_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/2_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/3_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/4_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/5_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/6_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/7_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/8_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/9_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/10_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/11_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/12_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/13_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/apartments/14_s.jpg)"></a></li>
+        </ul>
+      </aside>
+
+      <div class="col9 relative">
+        <button class="openProjectDesc enDesc">EN</button>
+<button class="openProjectDesc frDesc">FR</button>
+
+<div id="en-desc" class="project-description">
+  <a href="" class="close">X</a>
+  
+    <h4>The appartment</h4>
+    <p>It is an extension of our inner selves, not necessarily a safe haven which protects us from the outside world.  It is a reflection of our " Me ".  A theatrical stage on which we " act " out scenes daily.  In my photos, I tried to capture these young women in their chosen interiors, their homes. Through seemingly banal actions, they represent  unconsciously, their particular social, economic personal, emotional situation at that moment in time. They all play their self-assigned role in the lives they are experiencing.  I chose to use their appartments as a truthful backdrop which can sometimes balance on the edge of the surreal and not simply as decor. The lines between reality and illusion become indistinct. Minute details can turn the dramatic insignificant and vice versa.</p>
+  
+  
+</div>
+<div id="fr-desc" class="project-description">
+  <a href="" class="close">X</a>
+  
+    <h4>L’appartement</h4>
+    <p>C’est le prolongement de soi-même, pas forcément un lieu protecteur qui nous met en dehors du monde. Il est le reflet de notre moi. C’est comme une sorte de scène sur laquelle  se jouent des “pièces” de notre quotidien. Dans me photos,  je mets en scène des jeunes femmes dans leurs intérieurs, dans leurs lieux de vie. Il s’agit de représentations iconiques différentes pour chaque situation. Mais elles jouent toutes leur propre rôle, dans un quotidien théâtralisé de la vie quotidienne.</p>
+  
+</div>
         <ul id="slider" class="rslides">
           <li><img src="assets/img/photos/apartments/1.jpg" alt=""></li>
           <li><img src="assets/img/photos/apartments/2.jpg" alt=""></li>
@@ -83,29 +134,7 @@
           <li><img src="assets/img/photos/apartments/12.jpg" alt=""></li>
           <li><img src="assets/img/photos/apartments/13.jpg" alt=""></li>
           <li><img src="assets/img/photos/apartments/14.jpg" alt=""></li>
-          <li><img src="assets/img/photos/apartments/15.jpg" alt=""></li>
         </ul>
-      </div>
-      
-      <div class="col2">
-        <ul id="slider-pager" class="slide-thumb cf">
-          <li style="background-image: url(assets/img/photos/apartments/1.jpg)"><a href=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/2.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/3.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/4.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/5.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/6.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/7.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/8.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/9.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/10.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/11.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/12.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/13.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/14.jpg" alt=""></a></li>
-          <li><a href=""><img src="assets/img/photos/apartments/15.jpg" alt=""></a></li>
-        </ul>
-        <p class="work-desc">Living theatre of everyday life</p>
       </div>
     </div>
 
@@ -120,18 +149,9 @@
   </p>
 </footer>
         </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
         
-        <!-- Script block allowing child pages to inject their own scripts -->
         
 
         <!-- TODO: Fix album page size, add loader background for all photos :-) -->

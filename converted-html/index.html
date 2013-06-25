@@ -11,16 +11,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
         <title>Mr.Lee's Portfolio</title>
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
+        <script src="assets/scripts/lib/screenfull.min.js"></script>
+        
         <script src="assets/scripts/main.min.js"></script>
-        <!-- Styles -->
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
     <body>
@@ -29,102 +28,61 @@
         <![endif]-->
 
         <div id="wrapper" class="row app-container">
-            <!-- Content block, child page inject content -->
             
+  
   <header class="header row">
-	<h1 class="logo fl col2 hide-on-mobile">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <h1 class="mobile-logo col2 hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <nav class="main-nav fr col10">
-    <ul class="navigation cf">
-      <li class="hasSubmenu jsOpenSubmenu">
-        <a href="" >WORK</a>&nbsp;|&nbsp;
-        <ul class="submenu">
-          <li><a href="apartments.html">APARTMENTS</a></li>
-          <li><a href="nobody.html">I'M NOBODY</a></li>
-          <li><a href="long_haired_short_haired.html">LONG HAIRED SHORT HAIRED</a></li>
-          <li><a href="bollywood.html">DO YOU BOLLYWOOD</a></li>
-          <li><a href="jarawa.html">JARAWA</a></li>
-          <li><a href="made_of_stars.html">WE ARE ALL MADE OF STARS</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html" > ABOUT</a>&nbsp;|&nbsp;</li>
-      <li><a href="news.html" >NEWS</a>&nbsp;|&nbsp;</li>
-      <li><a href="contact.html" >CONTACT</a></li>
-      <!-- <li><a href="">Links</a></li> -->
-    </ul>
-  </nav>
-</header>
-  <section id="main-section" class="main-section row">
-    <div class="col8 apartments-cover" data-col='8'>
-      <img src="assets/img/photos/apartments/1.jpg">
-      <div class="album-intro">
-        <a href="apartments.html">
-          <h5 class="album-title">APARTMENTS</h5>
-          <h6 class="album-photo-counts">15 photographs</h6>
-        </a>
-      </div>
-    </div>
-    <div class="col4 bollywood-cover" data-col='4'>
-      <img src="assets/img/photos/bollywood/3.jpg">
-      <div class="album-intro">
-        <a href="bollywood.html">
-          <h5 class="album-title">DO YOU BOLLYWOOD</h5>
-          <h6 class="album-photo-counts">15 photographs</h6>
-        </a>
-      </div>
-    </div>
+	<div class="col3">
+    <h1 class="logo hide-on-mobile">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+    </h1>
+  </div>
+  <div class="col9">
+    <h1 class="section-title">
+      
+    </h1>
     
-    <div class="col6 news">
-      <a href="news.html">
-        <h4 class="expo-desc">exposition</h4>
-        <h3 class="expo-title">
-          GALERIE LE 29
-        </h3>
-        <h4 class="expo-desc">février-mars 2013</h4>
-      </a>
-    </div>
-    <div class="col6 jarawa-cover">
-      <img src="assets/img/photos/jarawa/2.jpg">
-      <div class="album-intro">
-        <a href="jarawa.html">
-          <h5 class="album-title">JARAWA</h5>
-          <h6 class="album-photo-counts">15 photographs</h6>
-        </a>
-      </div>
-    </div>
+  </div>
 
-    <div class="col4 long_haired_short_haired-cover last-row">
-      <img src="assets/img/photos/long_haired_short_haired/10.jpg">
-      <div class="album-intro">
-        <a href="long_haired_short_haired.html">
-          <h5 class="album-title">LONG HAIRED SHORT HAIRED</h5>
-          <h6 class="album-photo-counts">15 photographs</h6>
-        </a>
-      </div>
-    </div>
-    <div class="col4 long_haired_short_haired-cover last-row">
-      <img src="assets/img/photos/im_nobody/1.jpg">
-      <div class="album-intro">
-        <a href="nobody.html">
-          <h5 class="album-title">I'M NOBODY</h5>
-          <h6 class="album-photo-counts">15 photographs</h6>
-        </a>
-      </div>
-    </div>
-    <div class="col4 we_are_all_made_of_stars-cover last-row">
-      <img src="assets/img/photos/we_are_all_made_of_stars/star.jpg">
-      <div class="album-intro">
-        <a href="made_of_stars.html">
-          <h5 class="album-title">WE ARE ALL MADE OF STARS</h5>
-          <h6 class="album-photo-counts">15 photographs</h6>
-        </a>
-      </div>
-    </div>
-  </section>
+  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
+    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+  </h1>
+</header>
+  <article id="main-section" class="main-section row">
+    <aside class="col3 no-right-padding">
+      <nav class="main-nav">
+  <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" style="display:none;">
+        <li>
+          <a href="apartments.html" >Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" >Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html" > ABOUT</a></li>
+    <li><a href="news.html" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+    </aside>
+    
+    <section class="col9 main-photo">
+      <img src="assets/img/photos/apartments/1.jpg">
+    </section>
+    
+  </article>
 
             <footer class="footer row">
   <p class="rights col6">
@@ -135,18 +93,9 @@
   </p>
 </footer>
         </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
         
-        <!-- Script block allowing child pages to inject their own scripts -->
         
 
         <!-- TODO: Fix album page size, add loader background for all photos :-) -->

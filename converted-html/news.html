@@ -11,16 +11,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
         <title>Mr.Lee's Portfolio</title>
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
+        <script src="assets/scripts/lib/screenfull.min.js"></script>
+        
         <script src="assets/scripts/main.min.js"></script>
-        <!-- Styles -->
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
     <body>
@@ -29,53 +28,77 @@
         <![endif]-->
 
         <div id="wrapper" class="row app-container">
-            <!-- Content block, child page inject content -->
             
   
   <header class="header row">
-	<h1 class="logo fl col2 hide-on-mobile">
+	<div class="col3">
+    <h1 class="logo hide-on-mobile">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+    </h1>
+  </div>
+  <div class="col9">
+    <h1 class="section-title">
+      
+        NEWS
+      
+    </h1>
+    
+      <hr>
+    
+  </div>
+
+  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
     <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
   </h1>
-  <h1 class="mobile-logo col2 hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <nav class="main-nav fr col10">
-    <ul class="navigation cf">
-      <li class="hasSubmenu jsOpenSubmenu">
-        <a href="" >WORK</a>&nbsp;|&nbsp;
-        <ul class="submenu">
-          <li><a href="apartments.html">APARTMENTS</a></li>
-          <li><a href="nobody.html">I'M NOBODY</a></li>
-          <li><a href="long_haired_short_haired.html">LONG HAIRED SHORT HAIRED</a></li>
-          <li><a href="bollywood.html">DO YOU BOLLYWOOD</a></li>
-          <li><a href="jarawa.html">JARAWA</a></li>
-          <li><a href="made_of_stars.html">WE ARE ALL MADE OF STARS</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html" > ABOUT</a>&nbsp;|&nbsp;</li>
-      <li><a href="news.html"  class="selected" >NEWS</a>&nbsp;|&nbsp;</li>
-      <li><a href="contact.html" >CONTACT</a></li>
-      <!-- <li><a href="">Links</a></li> -->
-    </ul>
-  </nav>
 </header>
   
   <section id="about-section" class="about-section row">
-    <header class="about-header">
-      <h1 class="section-title">NEWS</h1>
-      <hr>
-      <h2 class="about-title">SOMETHINGS NEW?</h2>
-    </header>
-    
     <div class="news-content row">
-      <div class="col8">
-        <h4 class="expo-desc">exposition</h4>
+      <aside class="col3 no-right-padding">
+        <nav class="main-nav">
+  <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" ">
+        <li>
+          <a href="apartments.html" >Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" >Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html" > ABOUT</a></li>
+    <li><a href="news.html"  class="selected" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+      </aside>
+      <div class="col9">
+        <h4 class="expo-desc">Exposition</h4>
         <h3 class="expo-title">
-          GALERIE LE 29
+          NAME OF EXPO
         </h3>
-        <h4 class="expo-desc">février-mars 2013</h4>
+        <h4 class="content-title no-top-margin">15/08 - 30/12 2013</h4>
+        <h4 class="content-title">ABOUT THIS EXPO</h4>
+        <p>
+          This expo is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.. 
+        </p>
+        <p>
+          <a href="">http://thisexposite.com</a>
+        </p>
+        <h4 class="content-title">LOCATION</h4>
+        <p>10 rue Saint Antoine, 75004 Paris</p>
       </div>
-      <div id="map-canvas" class="col4"></div>
     </div>
     
   </section>
@@ -89,18 +112,9 @@
   </p>
 </footer>
         </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
         
-        <!-- Script block allowing child pages to inject their own scripts -->
         
 
         <!-- TODO: Fix album page size, add loader background for all photos :-) -->

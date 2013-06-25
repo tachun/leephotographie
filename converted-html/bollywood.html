@@ -11,16 +11,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Title block allowing child pages to override -->
         <title>Mr.Lee's Portfolio</title>
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
+        <script src="assets/scripts/lib/screenfull.min.js"></script>
+        
         <script src="assets/scripts/main.min.js"></script>
-        <!-- Styles -->
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
-        <!-- Style block allowing child pages to inject their own styles -->
         
     </head>
     <body>
@@ -29,45 +28,112 @@
         <![endif]-->
 
         <div id="wrapper" class="row app-container">
-            <!-- Content block, child page inject content -->
             
   
   <header class="header row">
-	<h1 class="logo fl col2 hide-on-mobile">
+	<div class="col3">
+    <h1 class="logo hide-on-mobile">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+    </h1>
+  </div>
+  <div class="col9">
+    <h1 class="section-title">
+      
+        DO YOU BOLLYWOOD
+      
+    </h1>
+    
+      <hr>
+    
+  </div>
+
+  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
     <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
   </h1>
-  <h1 class="mobile-logo col2 hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
-  <nav class="main-nav fr col10">
-    <ul class="navigation cf">
-      <li class="hasSubmenu jsOpenSubmenu">
-        <a href=""  class="selected" >WORK</a>&nbsp;|&nbsp;
-        <ul class="submenu">
-          <li><a href="apartments.html">APARTMENTS</a></li>
-          <li><a href="nobody.html">I'M NOBODY</a></li>
-          <li><a href="long_haired_short_haired.html">LONG HAIRED SHORT HAIRED</a></li>
-          <li><a href="bollywood.html">DO YOU BOLLYWOOD</a></li>
-          <li><a href="jarawa.html">JARAWA</a></li>
-          <li><a href="made_of_stars.html">WE ARE ALL MADE OF STARS</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html" > ABOUT</a>&nbsp;|&nbsp;</li>
-      <li><a href="news.html" >NEWS</a>&nbsp;|&nbsp;</li>
-      <li><a href="contact.html" >CONTACT</a></li>
-      <!-- <li><a href="">Links</a></li> -->
-    </ul>
-  </nav>
 </header>
   
-  <section id="about-section" class="about-section row">
-    <header class="about-header">
-      <h1 class="section-title">DO YOU BOLLYWOOD</h1>
-    </header>
-    <hr>
-
+  <section id="about-section" class="about-section row">  
     <div class="slider-container row">
-      <div class="col10">
+      <aside class="col3 no-right-padding">
+        <nav class="main-nav">
+  <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" ">
+        <li>
+          <a href="apartments.html" >Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" class='selected'>Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html" > ABOUT</a></li>
+    <li><a href="news.html" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+        <ul id="slider-pager" class="slide-thumb cf">
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/1_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/2_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/3_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/4_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/5_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/6_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/7_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/8_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/9_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/10_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/11_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/12_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/13_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/14_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/15_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/16_s.jpg)"></a></li>
+          <li><a href="" style="background-image: url(assets/img/photos/bollywood/17_s.jpg)"></a></li>
+        </ul>
+      </aside>
+
+      <div class="col9 relative">
+        <button class="openProjectDesc enDesc">EN</button>
+<button class="openProjectDesc frDesc">FR</button>
+
+<div id="en-desc" class="project-description">
+  <a href="" class="close">X</a>
+  
+    <h4>Do you Bollywood?</h4>
+    <p>
+      Bombay (now known as Mumbai) is the east’s capital of films – more films are made there than in the western counterpart, Hollywood. It has its own special characteristics left over from the influence of the days of the Raj.  It is the city that many Indians flock to in search of work or wealth and fame, and is a teeming metropolis of would-be Bollywood actors, all playing their roles to perfection on the streets. The sounds, colours and people are all just as in an enormous film studio.
+      <br><br>
+      No matter how miserable and poor Bombay looks to outsiders, Bollywood represents a dream for the people. The reality is everyone has their unique role to play in their life, even though they are unknown “stars” living out their destiny. Cinema in Bombay and in all of India is widely attended as it is a means of escape from the sad realities of life, and the city is like one vast film set, where the show must go on, regardless.
+      <br><br>
+      My pictures, which are nothing to do with Bollywood itself, show real scenes, shot in only one take, of ordinary people’s lives, all struggling to star in their own films, without the need for any props, special effects or a director shouting “action”.
+    </p>
+  
+  
+</div>
+<div id="fr-desc" class="project-description">
+  <a href="" class="close">X</a>
+  
+    <h4>Do you Bollywood?</h4>
+    <p>
+      Bombay (now known as Mumbai) is the east’s capital of films – more films are made there than in the western counterpart, Hollywood. It has its own special characteristics left over from the influence of the days of the Raj.  It is the city that many Indians flock to in search of work or wealth and fame, and is a teeming metropolis of would-be Bollywood actors, all playing their roles to perfection on the streets. The sounds, colours and people are all just as in an enormous film studio.
+      <br><br>
+      No matter how miserable and poor Bombay looks to outsiders, Bollywood represents a dream for the people. The reality is everyone has their unique role to play in their life, even though they are unknown “stars” living out their destiny. Cinema in Bombay and in all of India is widely attended as it is a means of escape from the sad realities of life, and the city is like one vast film set, where the show must go on, regardless.
+      <br><br>
+      My pictures, which are nothing to do with Bollywood itself, show real scenes, shot in only one take, of ordinary people’s lives, all struggling to star in their own films, without the need for any props, special effects or a director shouting “action”.
+    </p>
+  
+</div>
         <ul id="slider" class="rslides">
           <li><img src="assets/img/photos/bollywood/1.jpg" alt=""></li>
           <li><img src="assets/img/photos/bollywood/2.jpg" alt=""></li>
@@ -86,66 +152,7 @@
           <li><img src="assets/img/photos/bollywood/15.jpg" alt=""></li>
           <li><img src="assets/img/photos/bollywood/16.jpg" alt=""></li>
           <li><img src="assets/img/photos/bollywood/17.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/18.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/19.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/20.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/21.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/22.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/23.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/24.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/25.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/26.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/27.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/28.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/29.jpg" alt=""></li>
-          <li><img src="assets/img/photos/bollywood/130.jpg" alt=""></li>
         </ul>
-      </div>
-
-
-      <div class="col2">
-        <ul id="slider-pager" class="slide-thumb cf">
-          <li style="background-image: url(assets/img/photos/bollywood/1.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/2.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/3.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/4.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/5.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/6.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/7.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/8.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/9.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/10.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/11.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/12.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/13.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/14.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/15.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/16.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/17.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/18.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/19.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/20.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/21.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/22.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/23.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/24.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/25.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/26.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/27.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/28.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/29.jpg)"><a href=""></a></li>
-          <li style="background-image: url(assets/img/photos/bollywood/30.jpg)"><a href=""></a></li>
-
-        </ul>
-        <p class="work-desc">
-          Bombay (now known as Mumbai) is the east’s capital of films – more films are made there than in the western counterpart, Hollywood. It has its own special characteristics left over from the influence of the days of the Raj.
-        </p>
-        <p class="work-desc">
-          It is the city that many Indians flock to in search of work or wealth and fame, and is a teeming metropolis of would-be Bollywood actors, all playing their roles to perfection on the streets. The sounds, colours and people are all just as in an enormous film studio.No matter how miserable and poor Bombay looks to outsiders, Bollywood represents a dream for the people. The reality is everyone has their unique role to play in their life, even though they are unknown “stars” living out their destiny. 
-        </p>
-        <p class="work-desc">
-          Cinema in Bombay and in all of India is widely attended as it is a means of escape from the sad realities of life, and the city is like one vast film set, where the show must go on, regardless.My pictures, which are nothing to do with Bollywood itself, show real scenes, shot in only one take, of ordinary people’s lives, all struggling to star in their own films, without the need for any props, special effects or a director shouting “action”.
-        </p>
       </div>
     </div>
 
@@ -160,18 +167,9 @@
   </p>
 </footer>
         </div>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
         
-        <!-- Script block allowing child pages to inject their own scripts -->
         
 
         <!-- TODO: Fix album page size, add loader background for all photos :-) -->

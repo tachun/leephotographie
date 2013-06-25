@@ -41,10 +41,14 @@ function initProjectDesc(){
     $('.enDesc').on('click', function(){
       $('#en-desc').fadeIn();
       $('#fr-desc').fadeOut();
+      $(this).addClass('actived');
+      $('.frDesc').removeClass('actived');
     });
     $('.frDesc').on('click', function(){
       $('#fr-desc').fadeIn();
       $('#en-desc').fadeOut();
+      $(this).addClass('actived');
+      $('.enDesc').removeClass('actived');
     });
     $('.close').on('click', function(e){
       e.preventDefault();
