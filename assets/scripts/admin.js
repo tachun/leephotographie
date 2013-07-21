@@ -11,7 +11,8 @@ function loginUser(){
 }
 
 function logoutUser(){
-  $('#logoutBtn').on('click', function(){
+  $('#logoutBtn').on('click', function(e){
+    e.preventDefault();
     Parse.User.logOut();
     showCurrentUserData();
   });
@@ -70,3 +71,4 @@ function createUser(){
       }
   });  
 }
+

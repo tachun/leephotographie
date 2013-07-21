@@ -53,6 +53,7 @@ function initProjectDesc(){
     $('.close').on('click', function(e){
       e.preventDefault();
       $(this).parent().fadeOut();
+      $('.enDesc, .frDesc').removeClass('actived');
     });
   }
 }

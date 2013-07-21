@@ -965,6 +965,9 @@ aside {
   letter-spacing: 3px; }
 
 /* About page */
+.about-section {
+  padding-bottom: 40px; }
+
 .section-title {
   text-align: center;
   font-size: 2.8em;

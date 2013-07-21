@@ -1,10 +1,42 @@
 {% block content %}
   {{ "admin.js" | asset_url | script_tag }}
-  <section class="admin-panel">
-    <button id="logoutBtn">Log out</button>
+  {{ "about.js" | asset_url | script_tag }}
+  
+  <section class="admin-info">
+    <a id="logoutBtn" href="">Log out</a>
   </section>
+
+  <section class="admin-panel">
+    <p id="messages" class="messages">messages</p>
+    <div class="about-panel">
+      <h4>BIOGRAPHIE</h4>
+      <label for="">Title</label>
+      <input id="about-title-input" type="text" value="">
+      <label for="">Description</label>
+      <textarea name="" id="about-desc-input" cols="30" rows="10"></textarea>
+    </div>
+    <ul id="edu-panel">
+      <h4>EDUCTION</h4>
+      <li class="edu-first">
+        <label for="">Year of Eduction1</label>
+        <input id="edu-first-year" type="text" value="">
+        <label for="">Description</label>
+        <textarea name="" id="edu-first-desc" cols="30" rows="10"></textarea>
+      </li>
+      
+      <li calss="edu-second">
+        <label for="">Year of Eduction2</label>
+        <input id="edu-second-year" type="text" value="">
+        <label for="">Description</label>
+        <textarea name="" id="edu-second-desc" cols="30" rows="10"></textarea>
+      </li>
+    </ul>
+    <button id="update-bio" class="submit">Update Biographie</button>
+  </section>
+  
   <script>
     $(function() {
+      // If user not login, redirect to login page
       var currentUser = Parse.User.current();
       if (!currentUser) {
         window.location.href = "admin/";

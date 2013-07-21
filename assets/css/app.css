@@ -634,18 +634,45 @@ table {
   .login-panel input[type=text], .login-panel input[type=password] {
     width: 300px;
     margin-bottom: 30px; }
-  .login-panel .messages {
-    display: none;
-    color: #42c428;
-    padding: 5px 10px;
-    margin-bottom: 30px;
-    background-color: rgba(172, 249, 157, 0.3);
-    outline: 1px solid rgba(172, 249, 157, 0.5);
-    border-radius: 3px; }
   .login-panel .error {
     color: #ff4b4b;
     background-color: rgba(255, 117, 117, 0.3);
     outline: 1px solid rgba(255, 117, 117, 0.5); }
+
+.messages {
+  display: none;
+  width: 100%;
+  color: #2b8e17;
+  padding: 5px 10px;
+  margin-bottom: 30px;
+  background-color: rgba(172, 249, 157, 0.8);
+  outline: 1px solid rgba(43, 142, 23, 0.5);
+  border-radius: 3px;
+  text-shadow: 1px 1px 3px #ffffff; }
+
+.admin-panel {
+  width: 600px;
+  margin: 30px auto; }
+  .admin-panel ul, .admin-panel li {
+    list-style: none; }
+  .admin-panel .messages {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    text-align: center; }
+
+.admin-info {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  text-align: right;
+  font-size: 14px; }
+  .admin-info .logged-info {
+    display: inline-block;
+    margin-right: 20px; }
+  .admin-info a {
+    font-style: italic;
+    color: #dd4b39; }
 
 html {
   font-size: 62.5%; }
@@ -814,15 +841,14 @@ aside {
     opacity: 1; }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
+  position: relative;
   width: 100%;
   height: 40px;
   color: #9b9b9b;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background: #fff; }
+  background: #fff;
+  clear: both; }
   .footer p {
     display: inline-block;
     font-size: 1.2em;
@@ -965,6 +991,9 @@ aside {
   letter-spacing: 3px; }
 
 /* About page */
+.about-section {
+  padding-bottom: 40px; }
+
 .section-title {
   text-align: center;
   font-size: 2.8em;
@@ -1069,16 +1098,23 @@ hr {
     color: #fff;
     background-color: #000; }
 
-.enDesc, .frDesc {
+.project-desc-group {
   position: absolute;
-  top: -30px;
-  display: block;
-  width: 30px;
-  height: 30px;
+  top: -34px;
+  right: 12px; }
+  .project-desc-group p {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px; }
+
+.enDesc, .frDesc {
+  display: inline-block;
   color: #fff;
   font-size: 12px;
   text-align: center;
   line-height: 12px;
+  padding: 7px 10px;
+  margin-right: 5px;
   background-color: #000;
   border: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1090,12 +1126,6 @@ hr {
     color: #000;
     background-color: #fff;
     outline: 1px solid #ddd; }
-
-.enDesc {
-  right: 75px; }
-
-.frDesc {
-  right: 40px; }
 
 .slider-container {
   text-align: center; }

@@ -157,15 +157,14 @@ aside{
 }
 
 .footer{
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
+  position: relative;
   width: 100%;
   height: 40px;
   color: $gray-color;
   text-transform: uppercase;
   letter-spacing: 3px;
   background: #fff;
+  clear: both;
   p{
     display: inline-block;
     @include font-size(12);
@@ -292,7 +291,8 @@ aside{
 }
 
 /* About page */
-.about-header{
+.about-section{
+  padding-bottom: 40px;
 }
 
 .section-title{
@@ -389,16 +389,25 @@ hr{
   }
 }
 
-.enDesc, .frDesc{
+.project-desc-group{
   position: absolute;
-  top: -30px;
-  display: block;
-  width: 30px;
-  height: 30px;
+  top: -34px;
+  right: 12px;
+  p{
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}
+
+.enDesc, .frDesc{
+  display: inline-block;
   color: #fff;
   font-size: 12px;
   text-align: center;
   line-height: 12px;
+  padding: 7px 10px;
+  margin-right: 5px;
   background-color: #000;
   border: none;
   @include basic-transtion(all, .3s, ease-in-out);
@@ -407,14 +416,6 @@ hr{
     background-color: #fff;
     outline: 1px solid #ddd;
   }
-}
-
-.enDesc{
-  right: 75px;
-}
-
-.frDesc{
-  right: 40px;
 }
 
 .slider-container{
