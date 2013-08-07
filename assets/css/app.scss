@@ -10,12 +10,12 @@
 
 html{
   font-size: 62.5%;
+  height: 100%;
 }
 
 html, body{
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body{
@@ -156,8 +156,47 @@ aside{
   }
 }
 
+/* Navigation for small devices */
+.mobile-logo{
+  text-align: center;
+  margin: 0;
+  img{
+    height: 50px;
+  }
+}
+
+.mobile-nav-toggle{
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: inline-block;
+  width: 24px;
+  height: 15px;
+  padding: 8px;
+  cursor: pointer;
+  &:hover, &:active{
+    background-color: #eee;
+    border-radius: 5px;
+    -webkit-box-shadow: inset -1px -1px 2px 0px #ddd;
+            box-shadow: inset -1px -1px 2px 0px #ddd;
+  }
+  .mobile-nav-toggle-bar{
+    display: block;
+    border-top: 3px solid #333;
+    margin-top: 3px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+.main-nav-small-device{
+  .navigation{
+    text-align: center;
+  }
+}
+
 .footer{
-  position: relative;
   width: 100%;
   height: 40px;
   color: $gray-color;
@@ -286,13 +325,12 @@ aside{
 }
 .expo-desc{
   @include font-size(24);
-  margin: 0;
+  margin-top: -5px;
   letter-spacing: 3px;
 }
 
 /* About page */
 .about-section{
-  padding-bottom: 40px;
 }
 
 .section-title{
@@ -306,7 +344,7 @@ aside{
   display: inline-block;
   @include font-size(24);
   letter-spacing: 2px;
-  margin: 0 auto;
+  margin-top: -5px;
 }
 
 .about-subtitle{
@@ -472,6 +510,10 @@ hr{
 }
 
 /* Contact page */
+.contact-section{
+  margin-bottom: 40px;
+}
+
 .contact-form{
   margin-top: -6px;
 }
@@ -487,7 +529,7 @@ textarea, input[type=text], input[type=email], input[type=password]{
 }
 
 textarea{
-  height: 100px;
+  height: 200px;
 }
 
 .buttons input, input[type=submit], button.submit{

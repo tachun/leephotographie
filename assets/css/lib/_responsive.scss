@@ -26,7 +26,7 @@
 }
 
 // Tablets & small desktops only
-@media only screen and (min-width: $tablet-breakpoint+px) and (max-width: $desktop-breakpoint+px) {
+@media only screen and (min-width: ($tablet-breakpoint+1)+px) and (max-width: $desktop-breakpoint+px) {
   .hide-on-desktop, .hide-on-mobile{
     display: inherit;
   }
@@ -64,9 +64,8 @@
   @include reset_columns_mobile();
 
   /* Reset text align */
-  .header .main-nav{
-    margin: 0 0 40px 0;
-    text-align: center !important;
+  .header {
+    
   }
   .footer p.credit{
     text-align: center !important;

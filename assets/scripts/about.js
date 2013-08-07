@@ -55,7 +55,7 @@ function showAboutInfo(){
 
     },
     error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
+      $('#messages').text("Error: " + error.code + " " + error.message);
     }
   });
 
@@ -69,11 +69,11 @@ function showAboutInfo(){
           $('.edu').append('<li><p class="list-title"><strong>'+object.get('title')+'</strong></p><p class="edu-detail">'+object.get('description')+'</p></li>');
         }
         if ($('#edu-panel').length) {
-          if (i == 0){
+          if (i === 0){
             $('#edu-first-year').val(object.get('title'));
             $('#edu-first-desc').val(object.get('description'));
           }
-          else if ( i == 1){
+          else if (i === 1){
             $('#edu-second-year').val(object.get('title'));
             $('#edu-second-desc').val(object.get('description'));
           }
@@ -81,7 +81,7 @@ function showAboutInfo(){
       }
     },
     error: function(error) {
-      alert("Error: " + error.code + " " + error.message);
+      $('#messages').text("Error: " + error.code + " " + error.message);
     }
   });
 }
