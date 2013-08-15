@@ -15,6 +15,7 @@
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
+        <script src="assets/scripts/lib/response.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
         <script src="assets/scripts/lib/screenfull.min.js"></script>
         
@@ -30,11 +31,106 @@
         <div id="wrapper" class="row app-container">
             
   <script src="assets/scripts/admin.js"></script>
-  <section class="admin-panel">
-    <button id="logoutBtn">Log out</button>
+  <script src="assets/scripts/about.min.js"></script>
+  <script src="assets/scripts/news.min.js"></script>
+  <script src="assets/scripts/works.min.js"></script>
+  
+  <section class="admin-info">
+    <a id="logoutBtn" href="">Log out</a>
   </section>
+
+  <nav class="admin-nav">
+    <ul>
+      <li class="admin-nav-label">Edit your content:</li>
+      <li><button class="admin-nav-btn" data-target="works">WORKS PAGE</button></li>
+      <li> / </li>
+      <li><button class="admin-nav-btn" data-target="bio">ABOUT PAGE</button></li>
+      <li> / </li>
+      <li><button class="admin-nav-btn" data-target="news">NEWS PAGE</button></li>
+    </ul>
+  </nav>
+
+  <section class="admin-panel">
+    <p id="messages" class="messages">messages</p>
+    <div class="panel-works content-panel">
+      <div class="about-panel">
+        <h4>EDIT WORKS PAGE</h4>
+        <label for="works-title-input">Title on menu</label>
+        <input id="works-title-input" type="text" value="">
+        
+        <label for="works-title_en-input">English Title</label>
+        <input id="works-title_en-input" type="text" value="">
+
+        <label for="works-en-desc">English Description</label>
+        <textarea name="" id="works-en-desc" cols="30" rows="10"></textarea>
+        
+        <label for="works-title_fr-input">French Title</label>
+        <input id="works-title_fr-input" type="text" value="">
+        
+        <label for="works-fr-desc">French Description</label>
+        <textarea name="" id="works-fr-desc" cols="30" rows="10"></textarea>
+      </div>
+      <button id="update-works" class="submit">Update Works</button>
+    </div>
+
+    <div class="panel-bio content-panel">
+      <div class="about-panel">
+        <h4>EDIT ABOUT PAGE</h4>
+        <label for="">Title</label>
+        <input id="about-title-input" type="text" value="">
+        <label for="">Description</label>
+        <textarea name="" id="about-desc-input" cols="30" rows="10"></textarea>
+      </div>
+      <ul id="edu-panel">
+        <h4>EDUCTION</h4>
+        <li class="edu-first">
+          <label for="">Year of Eduction1</label>
+          <input id="edu-first-year" type="text" value="">
+          <label for="">Description</label>
+          <textarea name="" id="edu-first-desc" cols="30" rows="10"></textarea>
+        </li>
+        
+        <li calss="edu-second">
+          <label for="">Year of Eduction2</label>
+          <input id="edu-second-year" type="text" value="">
+          <label for="">Description</label>
+          <textarea name="" id="edu-second-desc" cols="30" rows="10"></textarea>
+        </li>
+      </ul>
+      <button id="update-bio" class="submit">Update Biographie</button>
+    </div>
+
+    <div class="panel-news content-panel">
+      <div class="about-panel">
+        <h4>EDIT NEWS PAGE</h4>
+        <label for="news-type-input">Type</label>
+        <input id="news-type-input" type="text" value="">
+        
+        <label for="news-title-input">Title</label>
+        <input id="news-title-input" type="text" value="">
+        
+        <label for="news-date-input">Date</label>
+        <input id="news-date-input" type="text" value="">
+        
+        <label for="news-subtitle-input">Subtitle</label>
+        <input id="news-subtitle-input" type="text" value="">
+        
+        <label for="news-desc-input">Description</label>
+        <textarea name="" id="news-desc-input" cols="30" rows="10"></textarea>
+        
+        <label for="news-link-input">Link</label>
+        <input id="news-link-input" type="text" value="">
+
+        <label for="news-location-input">Location</label>
+        <input id="news-location-input" type="text" value="">
+      </div>
+      <button id="update-news" class="submit">Update News</button>
+    </div>
+  </section>
+  
   <script>
     $(function() {
+      // If user not login, redirect to login page
       var currentUser = Parse.User.current();
       if (!currentUser) {
         window.location.href = "admin/";
@@ -42,13 +138,15 @@
     });
   </script>
 
-            <footer class="footer row">
-  <p class="rights col6">
-    © 2013 LEE Ching-Tsang. All rights reserved.
-  </p>
-  <p class="credit col6">
-    Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
-  </p>
+            <footer class="footer">
+  <div class="row">
+    <p class="rights col6">
+      © 2013 LEE Ching-Tsang. All rights reserved.
+    </p>
+    <p class="credit col6">
+      Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
+    </p>
+  </div>
 </footer>
         </div>
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>

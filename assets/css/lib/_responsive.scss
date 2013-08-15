@@ -1,5 +1,5 @@
 // For desktops
-@media only screen and (min-width: ($desktop-breakpoint+1)+px) {
+.big-device {
   .hide-on-tablet, .hide-on-mobile{
     display: inherit;
   }
@@ -26,7 +26,7 @@
 }
 
 // Tablets & small desktops only
-@media only screen and (min-width: ($tablet-breakpoint+1)+px) and (max-width: $desktop-breakpoint+px) {
+.medium-device {
   .hide-on-desktop, .hide-on-mobile{
     display: inherit;
   }
@@ -54,7 +54,7 @@
 }
 
 // For mobiles
-@media only screen and (max-width: $tablet-breakpoint+px) {
+.small-device {
   .hide-on-desktop, .hide-on-tablet{
     display: inherit;
   }
@@ -64,14 +64,23 @@
   @include reset_columns_mobile();
 
   /* Reset text align */
-  .header {
-    
-  }
   .footer p.credit{
     text-align: center !important;
   }
-  .slide-thumb li{
-    width: 54px !important;
+  .slide-thumb{
+    margin-bottom: 50px !important;
+    li{
+      width: 54px !important;
+    }
+  }
+  .about-content, .news-content{
+    h3, h4, p{
+      text-align: left !important;
+    }
+  }
+
+  .news-content .col9{
+    text-align: left !important;
   }
 }
 

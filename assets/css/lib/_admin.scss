@@ -54,3 +54,26 @@
     color: $highlight-color;
   }
 }
+
+.panel-bio, .panel-news{
+  display: none;
+}
+
+.admin-nav{
+  @include font-size(14);
+  text-align: center;
+  li{
+    display: inline-block;
+  }
+  .admin-nav-label{
+    margin-right: 10px;
+  }
+  button{
+    border: none;
+    background: none;
+    font-style: italic;
+    &:hover{
+      color: $highlight-color;
+    }
+  }
+}

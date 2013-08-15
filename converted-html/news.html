@@ -15,6 +15,7 @@
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
+        <script src="assets/scripts/lib/response.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
         <script src="assets/scripts/lib/screenfull.min.js"></script>
         
@@ -29,9 +30,14 @@
 
         <div id="wrapper" class="row app-container">
             
+  <script src="assets/scripts/news.min.js"></script>
   
   <header class="header row">
-	<div class="col3">
+  <h1 class="mobile-logo hide-on-desktop hide-on-tablet">
+    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+  </h1>
+	
+  <div class="col3">
     <h1 class="logo hide-on-mobile">
       <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
     </h1>
@@ -46,17 +52,47 @@
       <hr>
     
   </div>
-
-  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
 </header>
   
-  <section id="about-section" class="about-section row">
+  <section id="news-section" class="news-section row">
     <div class="news-content row">
       <aside class="col3 no-right-padding">
-        <nav class="main-nav">
+        <nav class="main-nav hide-on-mobile">
   <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" ">
+        <li>
+          <a href="apartments.html" >Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" >Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html" > ABOUT</a></li>
+    <li><a href="news.html"  class="selected" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+
+
+<nav class="main-nav-small-device hide-on-tablet hide-on-desktop">
+  <div class="mobile-nav-toggle">
+    <span class="mobile-nav-toggle-bar"></span>
+    <span class="mobile-nav-toggle-bar"></span>
+    <span class="mobile-nav-toggle-bar"></span>
+  </div>
+  <ul id="mobile-nav" class="navigation cf">
     <li>
       <a href="" class="jsOpenSubmenu ">WORK</a>
       <ul class="submenu" ">
@@ -84,32 +120,28 @@
 </nav>
       </aside>
       <div class="col9">
-        <h4 class="expo-desc">Exposition</h4>
-        <h3 class="expo-title">
-          NAME OF EXPO
-        </h3>
-        <h4 class="content-title no-top-margin">15/08 - 30/12 2013</h4>
-        <h4 class="content-title">ABOUT THIS EXPO</h4>
-        <p>
-          This expo is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.. 
-        </p>
-        <p>
-          <a href="">http://thisexposite.com</a>
-        </p>
-        <h4 class="content-title">LOCATION</h4>
-        <p>10 rue Saint Antoine, 75004 Paris</p>
+        <h4 id="news-type" class="expo-desc"></h4>
+        <h3 id="news-title" class="expo-title"></h3>
+        <h4 id="news-date" class="content-title news-date"></h4>
+        <h4 id="news-subtitle" class="content-title"></h4>
+        <p id="news-desc"></p>
+        <p id="news-link" class="news-link"></p>
+        <h4 id="news-location-title" class="content-title">LOCATION</h4>
+        <p id="news-location"></p>
       </div>
     </div>
     
   </section>
 
-            <footer class="footer row">
-  <p class="rights col6">
-    © 2013 LEE Ching-Tsang. All rights reserved.
-  </p>
-  <p class="credit col6">
-    Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
-  </p>
+            <footer class="footer">
+  <div class="row">
+    <p class="rights col6">
+      © 2013 LEE Ching-Tsang. All rights reserved.
+    </p>
+    <p class="credit col6">
+      Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
+    </p>
+  </div>
 </footer>
         </div>
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>

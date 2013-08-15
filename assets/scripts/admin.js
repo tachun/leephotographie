@@ -1,6 +1,7 @@
 $(function() {
   loginUser();
   logoutUser();
+  switchPanel();
 });
 
 function loginUser(){
@@ -70,5 +71,13 @@ function createUser(){
         alert("Error: " + error.code + " " + error.message);
       }
   });  
+}
+
+function switchPanel(){
+  $('.admin-nav-btn').on('click', function(){
+    var target = $(this).data("target");
+    $(".content-panel").hide();
+    $(".panel-" + target).show();
+  });
 }
 

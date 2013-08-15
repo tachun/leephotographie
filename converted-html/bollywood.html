@@ -15,6 +15,7 @@
         <script src="assets/scripts/lib/modernizr-2.6.2.min.js"></script>
         <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
         <script src="assets/scripts/lib/jquery-1.9.1.min.js"></script>
+        <script src="assets/scripts/lib/response.min.js"></script>
         <script src="assets/scripts/lib/parse-1.2.8.min.js"></script>
         <script src="assets/scripts/lib/screenfull.min.js"></script>
         
@@ -31,7 +32,11 @@
             
   
   <header class="header row">
-	<div class="col3">
+  <h1 class="mobile-logo hide-on-desktop hide-on-tablet">
+    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
+  </h1>
+	
+  <div class="col3">
     <h1 class="logo hide-on-mobile">
       <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
     </h1>
@@ -46,17 +51,47 @@
       <hr>
     
   </div>
-
-  <h1 class="mobile-logo col hide-on-desktop hide-on-tablet">
-    <a href="index.html"><img src="assets/img/logo.png" alt="Main logo"></a>
-  </h1>
 </header>
   
   <section id="about-section" class="about-section row">  
     <div class="slider-container row">
       <aside class="col3 no-right-padding">
-        <nav class="main-nav">
+        <nav class="main-nav hide-on-mobile">
   <ul class="navigation cf">
+    <li>
+      <a href="" class="jsOpenSubmenu ">WORK</a>
+      <ul class="submenu" ">
+        <li>
+          <a href="apartments.html" >Apartments</a>
+        </li>
+        <li>
+          <a href="long_haired_short_haired.html" >Long haired short haired</a>
+        </li>
+        <li>
+          <a href="bollywood.html" class='selected'>Do you bollywood</a>
+        </li>
+        <li>
+          <a href="jarawa.html" >Jarawa</a>
+        </li>
+        <li>
+          <a href="road.html" >Road</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="about.html" > ABOUT</a></li>
+    <li><a href="news.html" >NEWS</a></li>
+    <li><a href="contact.html" >CONTACT</a></li>
+  </ul>
+</nav>
+
+
+<nav class="main-nav-small-device hide-on-tablet hide-on-desktop">
+  <div class="mobile-nav-toggle">
+    <span class="mobile-nav-toggle-bar"></span>
+    <span class="mobile-nav-toggle-bar"></span>
+    <span class="mobile-nav-toggle-bar"></span>
+  </div>
+  <ul id="mobile-nav" class="navigation cf">
     <li>
       <a href="" class="jsOpenSubmenu ">WORK</a>
       <ul class="submenu" ">
@@ -104,8 +139,11 @@
       </aside>
 
       <div class="col9 relative">
-        <button class="openProjectDesc enDesc">EN</button>
-<button class="openProjectDesc frDesc">FR</button>
+        <div class="project-desc-group">
+  <p>PROJECT TEXT - </p>
+  <button class="openProjectDesc enDesc">EN</button>
+  <button class="openProjectDesc frDesc">FR</button>
+</div>
 
 <div id="en-desc" class="project-description">
   <a href="" class="close">X</a>
@@ -158,13 +196,15 @@
 
   </section>
 
-            <footer class="footer row">
-  <p class="rights col6">
-    © 2013 LEE Ching-Tsang. All rights reserved.
-  </p>
-  <p class="credit col6">
-    Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
-  </p>
+            <footer class="footer">
+  <div class="row">
+    <p class="rights col6">
+      © 2013 LEE Ching-Tsang. All rights reserved.
+    </p>
+    <p class="credit col6">
+      Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
+    </p>
+  </div>
 </footer>
         </div>
         <script src="assets/scripts/lib/responsiveslides.min.js"></script>

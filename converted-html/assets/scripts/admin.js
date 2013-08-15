@@ -1,6 +1,7 @@
 $(function() {
   loginUser();
   logoutUser();
+  switchPanel();
 });
 
 function loginUser(){
@@ -11,7 +12,8 @@ function loginUser(){
 }
 
 function logoutUser(){
-  $('#logoutBtn').on('click', function(){
+  $('#logoutBtn').on('click', function(e){
+    e.preventDefault();
     Parse.User.logOut();
     showCurrentUserData();
   });
@@ -70,3 +72,12 @@ function createUser(){
       }
   });  
 }
+
+function switchPanel(){
+  $('.admin-nav-btn').on('click', function(){
+    var target = $(this).data("target");
+    $(".content-panel").hide();
+    $(".panel-" + target).show();
+  });
+}
+

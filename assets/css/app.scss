@@ -159,7 +159,7 @@ aside{
 /* Navigation for small devices */
 .mobile-logo{
   text-align: center;
-  margin: 0;
+  margin-top: 20px;
   img{
     height: 50px;
   }
@@ -167,8 +167,8 @@ aside{
 
 .mobile-nav-toggle{
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 30px;
+  left: 20px;
   display: inline-block;
   width: 24px;
   height: 15px;
@@ -192,7 +192,35 @@ aside{
 
 .main-nav-small-device{
   .navigation{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    background-color: #fff;
+    z-index: 1000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    -webkit-box-shadow: 0 0 5px 0 #ddd;
+            box-shadow: 0 0 5px 0 #ddd;
+    & > li{
+      border-bottom: 1px solid #eee;
+      background-color: #fff;
+      padding: 0;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        font-weight: bold;
+      }
+    }
+    .submenu {
+      li a{
+        padding: 2px 0;
+      }
+    }
   }
 }
 
@@ -309,24 +337,33 @@ aside{
 }
 
 .expo-title{
-  display: inline-block;
+  display: inline;
   @include font-size(36);
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 5px 15px;
   margin: 10px 0;
   border: 1px solid $default-font-color;
-  @include basic-transtion(all, .3s, ease-in-out);
-  &:hover{
-    color: #fff;
-    background-color: $default-font-color;
-    box-shadow: inset 0 0 0 3px rgba(255,255,255,.2);
-  }
+  white-space: nowrap;
 }
 .expo-desc{
   @include font-size(24);
   margin-top: -5px;
   letter-spacing: 3px;
+}
+
+#news-location-title{
+  display: none;
+}
+
+.news-date{
+  margin-top: 20px !important;
+}
+
+.news-link{
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
 }
 
 /* About page */
@@ -352,7 +389,7 @@ aside{
   @include font-size(17);
   letter-spacing: 2px;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 hr{
@@ -366,9 +403,9 @@ hr{
 
 .half-list li{
   list-style: none;
-  width: 40%;
+  width: 50%;
   float: left;
-  margin-right: 5%;
+  padding-right: 0;
   .list-title{
     margin-top: 0;
   }
@@ -526,6 +563,7 @@ textarea, input[type=text], input[type=email], input[type=password]{
   border: 1px solid #ddd !important;
   border-radius: 3px;
   font-family: 'Karla', sans-serif;
+  -webkit-appearance: none;
 }
 
 textarea{
