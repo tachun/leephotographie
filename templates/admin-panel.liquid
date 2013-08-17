@@ -1,4 +1,14 @@
 {% block content %}
+  <script>
+    $(function() {
+      // If user not login, redirect to login page
+      var currentUser = Parse.User.current();
+      if (!currentUser) {
+        window.location.href = "admin/";
+      }
+    });
+  </script>
+
   {{ "admin.js" | asset_url | script_tag }}
   {{ "about.js" | asset_url | script_tag }}
   {{ "news.js" | asset_url | script_tag }}
@@ -11,17 +21,25 @@
   <nav class="admin-nav">
     <ul>
       <li class="admin-nav-label">Edit your content:</li>
-      <li><button class="admin-nav-btn" data-target="works">WORKS PAGE</button></li>
+      <li><button class="admin-nav-btn" data-target="works">WORKS</button></li>
       <li> / </li>
-      <li><button class="admin-nav-btn" data-target="bio">ABOUT PAGE</button></li>
+      <li><button class="admin-nav-btn" data-target="bio">ABOUT</button></li>
       <li> / </li>
-      <li><button class="admin-nav-btn" data-target="news">NEWS PAGE</button></li>
+      <li><button class="admin-nav-btn" data-target="news">NEWS</button></li>
     </ul>
   </nav>
 
   <section class="admin-panel">
     <p id="messages" class="messages">messages</p>
+    <div class="empty-message">
+      <div class="empty-msg">
+        Choose a page to edit
+      </div>
+    </div>
     <div class="panel-works content-panel">
+      <ul id="works-list">
+        
+      </ul>
       <div class="about-panel">
         <h4>EDIT WORKS PAGE</h4>
         <label for="works-title-input">Title on menu</label>
@@ -38,6 +56,8 @@
         
         <label for="works-fr-desc">French Description</label>
         <textarea name="" id="works-fr-desc" cols="30" rows="10"></textarea>
+
+        <input type="hidden" id="work-id">
       </div>
       <button id="update-works" class="submit">Update Works</button>
     </div>
@@ -96,14 +116,4 @@
       <button id="update-news" class="submit">Update News</button>
     </div>
   </section>
-  
-  <script>
-    $(function() {
-      // If user not login, redirect to login page
-      var currentUser = Parse.User.current();
-      if (!currentUser) {
-        window.location.href = "admin/";
-      }
-    });
-  </script>
 {% endblock %}

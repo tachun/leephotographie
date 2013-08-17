@@ -55,7 +55,7 @@
   }
 }
 
-.panel-bio, .panel-news{
+.panel-bio, .panel-news, .panel-works{
   display: none;
 }
 
@@ -74,6 +74,52 @@
     font-style: italic;
     &:hover{
       color: $highlight-color;
+    }
+  }
+}
+
+label{
+  display: block;
+  font-weight: bold;
+}
+
+#works-list{
+  text-align: center;
+  li{
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+    &:after{
+      content: "/";
+      padding-left: 10px;
+    }
+    &:last-child:after{
+      content: none;
+    }
+  }
+}
+
+.empty-message{
+  min-height: 500px;
+  .empty-msg{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,.8);
+    margin-left: 260px;
+    &:before{
+      position: absolute;
+      bottom: 100%;
+      left: 47%;
+      content: "";
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid rgba(0,0,0,.8);
     }
   }
 }

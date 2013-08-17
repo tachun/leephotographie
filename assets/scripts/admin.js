@@ -76,7 +76,7 @@ function createUser(){
 function switchPanel(){
   $('.admin-nav-btn').on('click', function(){
     var target = $(this).data("target");
-    $(".content-panel").hide();
+    $(".content-panel, .empty-message").hide();
     $(".panel-" + target).show();
   });
 }
