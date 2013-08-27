@@ -4,6 +4,8 @@ $(function() {
   switchPanel();
 });
 
+var panel_url = "admin-panel/";
+
 function loginUser(){
   $('#loginBtn').on('click', function(e){
     e.preventDefault();
@@ -26,7 +28,7 @@ function showCurrentUserData(){
   if (currentUser) {
     messages.text('Hello, '+ currentUser.attributes.username ).slideDown();
     setTimeout(function(){
-      window.location.href = "admin-panel/";
+      window.location.href = panel_url;
     },500)
   } else {
     messages.text('User is logout').slideDown();
