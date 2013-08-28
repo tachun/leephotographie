@@ -21,6 +21,7 @@
         
         <script src="assets/scripts/main.min.js"></script>
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="assets/scripts/works.min.js"></script>
         
     </head>
     <body>
@@ -30,7 +31,18 @@
 
         <div id="wrapper" class="row app-container">
             
+  <script>
+    $(function() {
+      // If user not login, redirect to login page
+      var currentUser = Parse.User.current();
+      if (currentUser) {
+        window.location.href = "admin-panel.html";
+      }
+    });
+  </script>
+  
   <script src="assets/scripts/admin.js"></script>
+
   <section class="login-panel">
     <form id="login" class="login-form">
       <h2>Log In</h2>
@@ -39,18 +51,9 @@
       <input type="text" id="login-username" placeholder="Username" />
       <input type="password" id="login-password" placeholder="Password" />
       <button id="loginBtn" class="submit">Log In</button>
-      <button id="logoutBtn">Log out</button>
+      <!-- <button id="logoutBtn">Log out</button> -->
     </form>
   </section>
-  <script>
-    $(function() {
-      // If user not login, redirect to login page
-      var currentUser = Parse.User.current();
-      if (currentUser) {
-        window.location.href = "admin-panel/";
-      }
-    });
-  </script>
 
             <footer class="footer">
   <div class="row">

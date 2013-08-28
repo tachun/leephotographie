@@ -29,8 +29,12 @@ function showWorksInfo(){
     success: function(results) {
       // Do something with the returned Parse.Object values
       for (var i = 0; i < results.length; i++) { 
-        var object = results[i];
+        var object  = results[i],
+            workUrl = object.get('title').split(' ').join('_').toLowerCase();
         $("#works-list").append("<li class='"+object.id+"'>"+ object.get('title') +"</li>");
+        // if($(".submenu").length > 0){
+        //   $(".submenu").append("<li><a href='"+ workUrl +"'>"+ object.get('title') +"</a></li>");
+        // }
       }
 
       $('#works-list li').on('click', function(){
