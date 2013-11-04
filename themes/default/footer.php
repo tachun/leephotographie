@@ -1,0 +1,14 @@
+      <footer class="footer">
+        <div class="row">
+          <p class="rights col6">
+            © 2013 LEE Ching-Tsang. All rights reserved.
+          </p>
+          <p class="credit col6">
+            Design & Development by <a href="http://tachunlin.com" target="_blank">Tachun LIN</a>
+          </p>
+        </div>
+      </footer>
+    
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Theme name:    Lee Photographie
+Description:   A theme of photogrer website
+Author name:   Tachun LIN
+Author site:   http://tachunlin.com
+License:       MIT

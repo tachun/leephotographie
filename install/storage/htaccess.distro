@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase {{base}}
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule . {{index}} [L,QSA]
+</IfModule>
